@@ -46,7 +46,9 @@ function App() {
   };
 
   const restart = () => {
-    
+    setCount(0);
+    setStep(1);
+    setFinished(false);
   }
 
   return (
@@ -56,6 +58,7 @@ function App() {
           <Result 
             countCorrectAnswers={countCorrectAnswers} 
             questionsLength={questions.length}
+            restart={restart}
           />
         ) : (
           <Game 
